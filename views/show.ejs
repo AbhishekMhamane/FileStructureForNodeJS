@@ -1,0 +1,11 @@
+
+<% persons.forEach(function(i){ %>
+<h3><%=i.name %>  <%=i.birthdate %>  <%=i.mobile %>  <%=i.email %></h3>
+<form  action="/delete" method="post">
+    <button type="submit" name="pid" value=<%= i._id %> onchange="this.form.submit()">delete</button>
+</form>
+<% }) %>
+
+<form  action="/add">
+    <button type="submit">add</button>
+</form>
